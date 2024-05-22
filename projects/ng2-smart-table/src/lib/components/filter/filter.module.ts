@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Ng2CompleterModule } from 'ng2-completer';
 
 import { FilterComponent } from './filter.component';
 import { DefaultFilterComponent } from "./default-filter.component";
 import { CustomFilterComponent } from "./custom-filter.component";
 import { CheckboxFilterComponent } from './filter-types/checkbox-filter.component';
-import { CompleterFilterComponent } from './filter-types/completer-filter.component';
+import { SearchFilterComponent } from './filter-types/search-filter.component';
 import { InputFilterComponent } from './filter-types/input-filter.component';
 import { SelectFilterComponent } from './filter-types/select-filter.component';
 import { DefaultFilter } from './filter-types/default-filter';
 import { FilterDefault } from './filter-default';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 const FILTER_COMPONENTS = [
   FilterDefault,
@@ -20,7 +20,7 @@ const FILTER_COMPONENTS = [
   DefaultFilterComponent,
   CustomFilterComponent,
   CheckboxFilterComponent,
-  CompleterFilterComponent,
+  SearchFilterComponent,
   InputFilterComponent,
   SelectFilterComponent,
 ];
@@ -30,7 +30,7 @@ const FILTER_COMPONENTS = [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    Ng2CompleterModule,
+    NgSelectModule,
   ],
   declarations: [
     ...FILTER_COMPONENTS,

@@ -21,9 +21,9 @@
                      (onClick)="onClick($event)">
     </checkbox-editor>
 
-    <completer-editor *ngSwitchCase="'completer'"
+    <search-editor *ngSwitchCase="'search'"
                       [cell]="cell">
-    </completer-editor>
+    </search-editor>
 
     <input-editor *ngSwitchDefault
                   [cell]="cell"

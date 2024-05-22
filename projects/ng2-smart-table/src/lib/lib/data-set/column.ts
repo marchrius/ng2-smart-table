@@ -41,7 +41,7 @@ export class Column {
     return this.filterFunction;
   }
 
-  getConfig(): any {
+  getConfig(): Column['editor']['config'] {
     return this.editor && this.editor.config;
   }
 

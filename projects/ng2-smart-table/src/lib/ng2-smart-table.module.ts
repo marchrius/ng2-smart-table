@@ -9,6 +9,7 @@ import { TBodyModule } from './components/tbody/tbody.module';
 import { THeadModule } from './components/thead/thead.module';
 
 import { Ng2SmartTableComponent } from './ng2-smart-table.component';
+import { SearchService } from './components/service/search.service';
 
 @NgModule({
   imports: [
@@ -26,6 +27,9 @@ import { Ng2SmartTableComponent } from './ng2-smart-table.component';
   ],
   exports: [
     Ng2SmartTableComponent,
+  ],
+  providers: [
+    SearchService,
   ],
 })
 export class Ng2SmartTableModule {

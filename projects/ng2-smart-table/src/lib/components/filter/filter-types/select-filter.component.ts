@@ -30,9 +30,9 @@ export class SelectFilterComponent extends DefaultFilter implements OnInit {
   ngOnInit() {
     this.inputControl.valueChanges
       .pipe(
-        skip(1),
-        distinctUntilChanged(),
-        debounceTime(this.delay)
+        skip(1) as any,
+        distinctUntilChanged() as any,
+        debounceTime(this.delay) as any,
       )
       .subscribe((value: string) => this.setFilter());
   }
